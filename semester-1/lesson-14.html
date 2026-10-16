@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 14 · System Architecture and Component Design</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/lesson-style.css">
+</head>
+<body>
+  <div class="lesson-page">
+
+    <!-- ===== PHOTO PLACEHOLDER ===== -->
+    <!-- 
+      IMAGE DESCRIPTION:
+      A cross-section of a tree trunk showing rings, or a bridge 
+      structure with layers. The image represents system architecture — 
+      layers and components that connect together.
+      
+      SUGGESTED SOURCE: Unsplash / Pexels
+      SEARCH: "tree trunk cross section rings" or "bridge architecture layers"
+      DIMENSIONS: 1200×400px landscape
+    -->
+    <div class="lesson-hero">
+      <img src="../images/lesson-14.jpg" alt="Layered structure — symbolizing system architecture" class="lesson-hero-img">
+      <div class="lesson-hero-overlay">
+        <span class="lesson-number">Semester 1 · Lesson 14</span>
+        <h1>System Architecture and Component Design</h1>
+      </div>
+    </div>
+
+    <div class="lesson-nav-top">
+      <a href="lesson-13.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-15.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="lesson-meta">
+      <span><i class="fas fa-clock"></i> 100 minutes</span>
+      <span><i class="fas fa-layer-group"></i> Phase 4 · System Design & Requirements</span>
+      <span><i class="fas fa-bullseye"></i> Architecture Diagram</span>
+    </div>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-seedling"></i> Why This Matters</h2>
+      <p>Architecture is the blueprint of your system. It shows how the parts connect, like the layers of a tree trunk or the frame of a bridge. In this lesson, you will design the <strong>three layers</strong> of your system: presentation, logic, and data.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-leaf"></i> What You Will Learn</h2>
+      <ul class="objectives">
+        <li>Design a system architecture.</li>
+        <li>Identify components and their connections.</li>
+        <li>Draw an architecture diagram.</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-book-open"></i> Words to Know</h2>
+      <div class="vocab-grid">
+        <span>architecture</span>
+        <span>component</span>
+        <span>module</span>
+        <span>interface</span>
+        <span>connection</span>
+        <span>layer</span>
+        <span>client-server</span>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-stream"></i> Lesson Journey (100 minutes)</h2>
+
+      <div class="flow-block">
+        <h3>Part 1 — How Do Parts Connect? <span class="time">0–10 min</span></h3>
+        <p>Ask yourself: <em>How do the parts of your system connect?</em></p>
+        <ul>
+          <li>User interface connects to logic.</li>
+          <li>Logic connects to database.</li>
+        </ul>
+        <p>Architecture shows how components connect.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 2 — Architecture Design <span class="time">10–30 min</span></h3>
+        <p>Learn the three layers:</p>
+        <ul>
+          <li><strong>Presentation layer:</strong> what the user sees (UI).</li>
+          <li><strong>Logic layer:</strong> what the system does (processing, decisions).</li>
+          <li><strong>Data layer:</strong> where data is stored (database, files).</li>
+        </ul>
+        <p>Connections:</p>
+        <ul>
+          <li>User → UI → Logic → Data → Logic → UI → User.</li>
+        </ul>
+        <p>Example for the library system:</p>
+        <ul>
+          <li><strong>Presentation:</strong> search page, results page, book details.</li>
+          <li><strong>Logic:</strong> search engine, recommendation engine, borrow logic.</li>
+          <li><strong>Data:</strong> book database, user database, borrowing history.</li>
+        </ul>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 3 — Draw the Architecture Together <span class="time">30–55 min</span></h3>
+        <p>Draw the architecture for the library system.</p>
+        <p>Label each component and connection.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 4 — Your Turn: Design Your Architecture <span class="time">55–85 min</span></h3>
+        <p>Draw your architecture:</p>
+        <ul>
+          <li>Components.</li>
+          <li>Layers.</li>
+          <li>Connections.</li>
+          <li>Data flow direction.</li>
+        </ul>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 5 — Share and Discuss <span class="time">85–95 min</span></h3>
+        <p>Present your architecture.</p>
+        <p>Discuss: <em>Which component is most critical?</em></p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 6 — Exit Ticket <span class="time">95–100 min</span></h3>
+        <p>Draw and label the three layers of your system.</p>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-check-circle"></i> Check Your Understanding</h2>
+      <p>You are ready to move on when you can design a system architecture.</p>
+      <p><strong>Support:</strong> Use an architecture template with labeled layers.</p>
+      <p><strong>Challenge:</strong> Add external services (APIs, cloud).</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-home"></i> Before Next Lesson</h2>
+      <p>Refine your architecture diagram.</p>
+    </section>
+
+    <section class="teacher-announcement">
+      <h2><i class="fas fa-bullhorn"></i> Teacher Announcement</h2>
+      <div class="announcement-placeholder">
+        <p><em>[Write your announcement here]</em></p>
+      </div>
+    </section>
+
+    <div class="lesson-nav-bottom">
+      <a href="lesson-13.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-15.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+</body>
+</html>

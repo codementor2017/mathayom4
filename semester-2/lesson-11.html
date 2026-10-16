@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 11 · Real-Time Data Collection and Response</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/lesson-style.css">
+</head>
+<body>
+  <div class="lesson-page">
+
+    <!-- ===== PHOTO PLACEHOLDER ===== -->
+    <!-- 
+      IMAGE DESCRIPTION:
+      A live dashboard or a graph updating in real-time on a screen, 
+      with a plant sensor in the background. The image represents 
+      real-time data collection and response.
+      
+      SUGGESTED SOURCE: Unsplash / Pexels
+      SEARCH: "real time data dashboard" or "live graph screen"
+      DIMENSIONS: 1200×400px landscape
+    -->
+    <div class="lesson-hero">
+      <img src="../images/sem2-lesson-11.jpg" alt="Live dashboard — symbolizing real-time data" class="lesson-hero-img">
+      <div class="lesson-hero-overlay">
+        <span class="lesson-number">Semester 2 · Lesson 11</span>
+        <h1>Real-Time Data Collection and Response</h1>
+      </div>
+    </div>
+
+    <div class="lesson-nav-top">
+      <a href="lesson-10.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-12.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="lesson-meta">
+      <span><i class="fas fa-clock"></i> 100 minutes</span>
+      <span><i class="fas fa-layer-group"></i> Phase 8 · Automation & Integration</span>
+      <span><i class="fas fa-bullseye"></i> Live Data, Response</span>
+    </div>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-seedling"></i> Why This Matters</h2>
+      <p>Some systems need to react <strong>immediately</strong>. A fire alarm, a heart monitor, a traffic light — these all use real-time data. In this lesson, you will learn to collect data continuously and respond instantly when something changes.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-leaf"></i> What You Will Learn</h2>
+      <ul class="objectives">
+        <li>Collect data in real time.</li>
+        <li>Respond to data automatically.</li>
+        <li>Visualize live data.</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-book-open"></i> Words to Know</h2>
+      <div class="vocab-grid">
+        <span>real-time</span>
+        <span>stream</span>
+        <span>live data</span>
+        <span>dashboard</span>
+        <span>visualization</span>
+        <span>alert</span>
+        <span>response</span>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-stream"></i> Lesson Journey (100 minutes)</h2>
+
+      <div class="flow-block">
+        <h3>Part 1 — What is Real-Time Data? <span class="time">0–10 min</span></h3>
+        <p>Ask yourself: <em>What apps show real-time data?</em></p>
+        <ul>
+          <li>Weather.</li>
+          <li>Traffic.</li>
+          <li>Stock prices.</li>
+          <li>Fitness trackers.</li>
+        </ul>
+        <p>Real-time data updates continuously.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 2 — Real-Time Collection and Response <span class="time">10–30 min</span></h3>
+        <p>How it works:</p>
+        <ul>
+          <li>Collect data every X seconds.</li>
+          <li>Update the display.</li>
+          <li>Trigger alerts if thresholds are crossed.</li>
+        </ul>
+        <p>Python example:</p>
+        <pre class="code-block">
+import time
+
+while True:
+    moisture = read_sensor()
+    print("Moisture:", moisture)
+    if moisture &lt; 30:
+        print("ALERT: Water the plant!")
+    time.sleep(5)</pre>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 3 — Build a Real-Time Display Together <span class="time">30–55 min</span></h3>
+        <p>Build a real-time plant monitoring display.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 4 — Your Turn: Add Real-Time Features <span class="time">55–85 min</span></h3>
+        <p>Add to your project:</p>
+        <ul>
+          <li>Collect data in real time.</li>
+          <li>Display it live.</li>
+          <li>Trigger alerts.</li>
+        </ul>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 5 — Share and Discuss <span class="time">85–95 min</span></h3>
+        <p>Share your real-time system.</p>
+        <p>Discuss: <em>How often should your system update?</em></p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 6 — Exit Ticket <span class="time">95–100 min</span></h3>
+        <p>Describe one real-time alert in your system.</p>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-check-circle"></i> Check Your Understanding</h2>
+      <p>You are ready to move on when you can collect and respond to real-time data.</p>
+      <p><strong>Support:</strong> Use a real-time template.</p>
+      <p><strong>Challenge:</strong> Add historical data charts.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-home"></i> Before Next Lesson</h2>
+      <p>Improve your real-time features.</p>
+    </section>
+
+    <section class="teacher-announcement">
+      <h2><i class="fas fa-bullhorn"></i> Teacher Announcement</h2>
+      <div class="announcement-placeholder">
+        <p><em>[Write your announcement here]</em></p>
+      </div>
+    </section>
+
+    <div class="lesson-nav-bottom">
+      <a href="lesson-10.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-12.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+</body>
+</html>

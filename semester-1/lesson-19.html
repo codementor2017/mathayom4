@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 19 · Connecting Components</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/lesson-style.css">
+</head>
+<body>
+  <div class="lesson-page">
+
+    <!-- ===== PHOTO PLACEHOLDER ===== -->
+    <!-- 
+      IMAGE DESCRIPTION:
+      Several puzzle pieces being connected together on a table, 
+      or vines connecting different parts of a garden trellis. 
+      The image represents integration — connecting components 
+      into one working system.
+      
+      SUGGESTED SOURCE: Unsplash / Pexels
+      SEARCH: "puzzle pieces connecting" or "vines trellis garden"
+      DIMENSIONS: 1200×400px landscape
+    -->
+    <div class="lesson-hero">
+      <img src="../images/lesson-19.jpg" alt="Connecting puzzle pieces — symbolizing component integration" class="lesson-hero-img">
+      <div class="lesson-hero-overlay">
+        <span class="lesson-number">Semester 1 · Lesson 19</span>
+        <h1>Connecting Components</h1>
+      </div>
+    </div>
+
+    <div class="lesson-nav-top">
+      <a href="lesson-18.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-20.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="lesson-meta">
+      <span><i class="fas fa-clock"></i> 100 minutes</span>
+      <span><i class="fas fa-layer-group"></i> Phase 5 · Initial Prototype Building</span>
+      <span><i class="fas fa-bullseye"></i> Integration</span>
+    </div>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-seedling"></i> Why This Matters</h2>
+      <p>A system only works when its parts work together. In this lesson, you will connect your UI, your logic, and your data into one integrated prototype. This is called <strong>integration</strong>, and it is the moment your project comes alive.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-leaf"></i> What You Will Learn</h2>
+      <ul class="objectives">
+        <li>Connect your UI to your logic.</li>
+        <li>Connect your logic to your data.</li>
+        <li>Test the integrated prototype.</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-book-open"></i> Words to Know</h2>
+      <div class="vocab-grid">
+        <span>integration</span>
+        <span>connection</span>
+        <span>API</span>
+        <span>data binding</span>
+        <span>event</span>
+        <span>trigger</span>
+        <span>response</span>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-stream"></i> Lesson Journey (100 minutes)</h2>
+
+      <div class="flow-block">
+        <h3>Part 1 — Why Integrate? <span class="time">0–10 min</span></h3>
+        <p>Ask yourself: <em>Why do we need to connect components?</em></p>
+        <ul>
+          <li>So the user can see results.</li>
+          <li>So data can be saved.</li>
+          <li>So recommendations can be shown.</li>
+        </ul>
+        <p>Integration makes the system work as a whole.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 2 — Integration Methods <span class="time">10–30 min</span></h3>
+        <p>Learn the methods:</p>
+        <ul>
+          <li><strong>UI to logic:</strong> event triggers function (button click → search).</li>
+          <li><strong>Logic to data:</strong> function queries database (search → SELECT).</li>
+          <li><strong>Data to UI:</strong> results displayed (query results → list).</li>
+        </ul>
+        <p>Example flow:</p>
+        <ul>
+          <li>User types "Harry Potter" → search() → database query → results → display.</li>
+        </ul>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 3 — Connect Components Together <span class="time">30–55 min</span></h3>
+        <p>Connect:</p>
+        <ul>
+          <li>Search UI to search function.</li>
+          <li>Search function to database.</li>
+          <li>Database results to results UI.</li>
+        </ul>
+        <p>Test together.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 4 — Your Turn: Integrate Your Prototype <span class="time">55–85 min</span></h3>
+        <p>Connect your components in Python:</p>
+        <ul>
+          <li>UI to logic.</li>
+          <li>Logic to data.</li>
+          <li>Data back to UI.</li>
+        </ul>
+        <p>Test the integrated prototype.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 5 — Share and Discuss <span class="time">85–95 min</span></h3>
+        <p>Share your integrated prototype.</p>
+        <p>Discuss: <em>What was the hardest part of integration?</em></p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 6 — Exit Ticket <span class="time">95–100 min</span></h3>
+        <p>Describe the flow of data in your integrated prototype.</p>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-check-circle"></i> Check Your Understanding</h2>
+      <p>You are ready to move on when you can connect UI, logic, and data.</p>
+      <p><strong>Support:</strong> Use integration templates or starter code.</p>
+      <p><strong>Challenge:</strong> Add error handling.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-home"></i> Before Next Lesson</h2>
+      <p>Complete your integrated prototype and log any bugs.</p>
+    </section>
+
+    <section class="teacher-announcement">
+      <h2><i class="fas fa-bullhorn"></i> Teacher Announcement</h2>
+      <div class="announcement-placeholder">
+        <p><em>[Write your announcement here]</em></p>
+      </div>
+    </section>
+
+    <div class="lesson-nav-bottom">
+      <a href="lesson-18.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-20.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+</body>
+</html>

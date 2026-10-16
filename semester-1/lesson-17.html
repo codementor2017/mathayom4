@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 17 · Building the First Prototype</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/lesson-style.css">
+</head>
+<body>
+  <div class="lesson-page">
+
+    <!-- ===== PHOTO PLACEHOLDER ===== -->
+    <!-- 
+      IMAGE DESCRIPTION:
+      Hands building something small — a circuit board, a model, or a 
+      cardboard prototype. The image represents building your first 
+      prototype (MVP).
+      
+      SUGGESTED SOURCE: Unsplash / Pexels
+      SEARCH: "hands building prototype circuit" or "maker project"
+      DIMENSIONS: 1200×400px landscape
+    -->
+    <div class="lesson-hero">
+      <img src="../images/lesson-17.jpg" alt="Hands building a prototype — symbolizing MVP development" class="lesson-hero-img">
+      <div class="lesson-hero-overlay">
+        <span class="lesson-number">Semester 1 · Lesson 17</span>
+        <h1>Building the First Prototype</h1>
+      </div>
+    </div>
+
+    <div class="lesson-nav-top">
+      <a href="lesson-16.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-18.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="lesson-meta">
+      <span><i class="fas fa-clock"></i> 100 minutes</span>
+      <span><i class="fas fa-layer-group"></i> Phase 5 · Initial Prototype Building</span>
+      <span><i class="fas fa-bullseye"></i> Prototype Development</span>
+    </div>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-seedling"></i> Why This Matters</h2>
+      <p>A prototype is a simple version of your project that shows the main idea. Instead of building everything at once, you build the smallest working version first — called the <strong>MVP (Minimum Viable Product)</strong>. This is how real software teams work.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-leaf"></i> What You Will Learn</h2>
+      <ul class="objectives">
+        <li>Build a basic prototype of your project.</li>
+        <li>Focus on core functionality first.</li>
+        <li>Document your progress.</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-book-open"></i> Words to Know</h2>
+      <div class="vocab-grid">
+        <span>prototype</span>
+        <span>minimum viable product (MVP)</span>
+        <span>core feature</span>
+        <span>iteration</span>
+        <span>build</span>
+        <span>test</span>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-stream"></i> Lesson Journey (100 minutes)</h2>
+
+      <div class="flow-block">
+        <h3>Part 1 — What is a Prototype? <span class="time">0–10 min</span></h3>
+        <p>Ask yourself: <em>What is a prototype?</em></p>
+        <p>A simple version that shows the main idea. Build the simplest version that works first.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 2 — MVP Approach <span class="time">10–30 min</span></h3>
+        <p>Follow the MVP approach:</p>
+        <ol>
+          <li>Identify the core feature.</li>
+          <li>Build only that feature.</li>
+          <li>Test it.</li>
+          <li>Add more features later.</li>
+        </ol>
+        <p>Example for the library system:</p>
+        <ul>
+          <li><strong>MVP:</strong> search by title only.</li>
+          <li><strong>Next:</strong> search by author.</li>
+          <li><strong>Next:</strong> recommendations.</li>
+          <li><strong>Next:</strong> borrowing history.</li>
+        </ul>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 3 — Plan Your MVP Together <span class="time">30–55 min</span></h3>
+        <p>Identify the MVP for the library system.</p>
+        <p>Write the plan on the board.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 4 — Your Turn: Build Your Prototype <span class="time">55–85 min</span></h3>
+        <p>Build your MVP in Python:</p>
+        <ul>
+          <li>Focus on the core feature.</li>
+          <li>Document progress in the prototype log.</li>
+          <li>Test as you build.</li>
+        </ul>
+        <p>Example Python starter:</p>
+        <pre class="code-block">
+books = ["Harry Potter", "The Hobbit", "Dune"]
+
+def search(title):
+    results = [b for b in books if title.lower() in b.lower()]
+    return results
+
+print(search("harry"))</pre>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 5 — Share and Discuss <span class="time">85–95 min</span></h3>
+        <p>Share your progress.</p>
+        <p>Discuss: <em>What was the hardest part of building?</em></p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 6 — Exit Ticket <span class="time">95–100 min</span></h3>
+        <p>What is your MVP, and what does it do?</p>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-check-circle"></i> Check Your Understanding</h2>
+      <p>You are ready to move on when you can build a basic prototype with core functionality.</p>
+      <p><strong>Support:</strong> Use starter code or templates.</p>
+      <p><strong>Challenge:</strong> Add one extra feature.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-home"></i> Before Next Lesson</h2>
+      <p>Continue building your prototype.</p>
+    </section>
+
+    <section class="teacher-announcement">
+      <h2><i class="fas fa-bullhorn"></i> Teacher Announcement</h2>
+      <div class="announcement-placeholder">
+        <p><em>[Write your announcement here]</em></p>
+      </div>
+    </section>
+
+    <div class="lesson-nav-bottom">
+      <a href="lesson-16.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-18.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+</body>
+</html>

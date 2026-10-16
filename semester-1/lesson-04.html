@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 · Algorithm Design for Complete Systems</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/lesson-style.css">
+</head>
+<body>
+  <div class="lesson-page">
+
+    <!-- ===== PHOTO PLACEHOLDER ===== -->
+    <!-- 
+      IMAGE DESCRIPTION:
+      A moss-covered stone path winding through a green forest. 
+      The path symbolizes an algorithm — a clear sequence of steps 
+      leading from start to finish, with each stone representing 
+      one instruction.
+      
+      SUGGESTED SOURCE: Unsplash / Pexels
+      SEARCH: "forest path moss" or "stone path woods"
+      DIMENSIONS: 1200×400px landscape
+    -->
+    <div class="lesson-hero">
+      <img src="../images/lesson-04.jpg" alt="Forest path — symbolizing step-by-step algorithms" class="lesson-hero-img">
+      <div class="lesson-hero-overlay">
+        <span class="lesson-number">Semester 1 · Lesson 4</span>
+        <h1>Algorithm Design for Complete Systems</h1>
+      </div>
+    </div>
+
+    <!-- ===== TOP NAVIGATION ===== -->
+    <div class="lesson-nav-top">
+      <a href="lesson-03.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-05.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="lesson-meta">
+      <span><i class="fas fa-clock"></i> 100 minutes</span>
+      <span><i class="fas fa-layer-group"></i> Phase 1 · Computational Thinking Foundations</span>
+      <span><i class="fas fa-bullseye"></i> Step-by-Step Logic for Full Systems</span>
+    </div>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-seedling"></i> Why This Matters</h2>
+      <p>Think of a path through the forest. Each stone leads to the next, and if you follow them in order, you reach your destination. That is exactly what an <strong>algorithm</strong> is: a clear sequence of steps that solves a problem.</p>
+      <p>But a project is more than one algorithm. It is many algorithms working together. In this lesson, you will learn how to write algorithms for each sub-system and then connect them into one complete system.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-leaf"></i> What You Will Learn</h2>
+      <ul class="objectives">
+        <li>Write algorithms for each sub-system.</li>
+        <li>Connect sub-system algorithms into one complete system.</li>
+        <li>Use pseudocode to describe the full system.</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-book-open"></i> Words to Know</h2>
+      <div class="vocab-grid">
+        <span>algorithm</span>
+        <span>pseudocode</span>
+        <span>sub-system</span>
+        <span>logic</span>
+        <span>sequence</span>
+        <span>condition</span>
+        <span>loop</span>
+        <span>integration</span>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-stream"></i> Lesson Journey (100 minutes)</h2>
+
+      <div class="flow-block">
+        <h3>Part 1 — From Sub-System to System <span class="time">0–10 min</span></h3>
+        <p>Ask yourself: <em>If you have algorithms for each sub-system, how do they work together?</em></p>
+        <p>They need to exchange data and trigger each other. That is what we call <strong>system-level algorithm design</strong>.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 2 — Writing System Algorithms <span class="time">10–30 min</span></h3>
+        <p>Follow this process:</p>
+        <ol>
+          <li>Write pseudocode for each sub-system.</li>
+          <li>Identify inputs and outputs of each sub-system.</li>
+          <li>Connect them: output of one = input of another.</li>
+          <li>Write a main algorithm that calls each sub-system.</li>
+        </ol>
+        <p>Example — Automatic plant control system:</p>
+        <pre class="code-block">
+MAIN:
+  LOOP forever:
+    moisture = read_soil_sensor()
+    IF moisture &lt; threshold:
+      turn_pump_on()
+    ELSE:
+      turn_pump_off()
+    log_data(moisture)
+    display_status()</pre>
+        <p>The main algorithm orchestrates the sub-systems.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 3 — Practise Together: Library System <span class="time">30–55 min</span></h3>
+        <p>Let's write the system algorithm for the library system together:</p>
+        <ul>
+          <li><strong>Sub-system algorithms:</strong> search, recommend, display, borrow.</li>
+          <li><strong>Main algorithm:</strong> user logs in → search → recommend → borrow → log.</li>
+        </ul>
+        <p>Write on the board together.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 4 — Your Turn: Design Your System Algorithm <span class="time">55–85 min</span></h3>
+        <p>Write pseudocode for:</p>
+        <ul>
+          <li>Each sub-system (at least 5).</li>
+          <li>The main algorithm that connects them.</li>
+        </ul>
+        <p>Test your logic by walking through a sample scenario with your group.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 5 — Share and Discuss <span class="time">85–95 min</span></h3>
+        <p>Present your system algorithm.</p>
+        <p>Discuss: <em>What was the hardest part of connecting the sub-systems?</em></p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 6 — Exit Ticket <span class="time">95–100 min</span></h3>
+        <p>Write the main algorithm for your project in 5 steps.</p>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-check-circle"></i> Check Your Understanding</h2>
+      <p>You are ready to move on when you can write pseudocode for the full system.</p>
+      <p><strong>Support:</strong> Use a pseudocode template with sub-system placeholders.</p>
+      <p><strong>Challenge:</strong> Can you add error handling to the main algorithm?</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-home"></i> Before Next Lesson</h2>
+      <p>Complete your system algorithm and add comments.</p>
+    </section>
+
+    <section class="teacher-announcement">
+      <h2><i class="fas fa-bullhorn"></i> Teacher Announcement</h2>
+      <div class="announcement-placeholder">
+        <p><em>[Write your announcement here]</em></p>
+      </div>
+    </section>
+
+    <div class="lesson-nav-bottom">
+      <a href="lesson-03.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-05.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+</body>
+</html>

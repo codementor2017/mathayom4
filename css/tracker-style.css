@@ -1,0 +1,530 @@
+/* ============================================
+   TEACHER PROGRESS TRACKER · Nature Theme
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+body {
+  background: #eef5ea;
+  color: #1e3a28;
+  padding: 1.5rem;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.tracker-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px -18px rgba(40, 70, 45, 0.35);
+  padding: 2rem;
+  border: 1px solid #c8dfc0;
+}
+
+/* ---------- Header ---------- */
+.tracker-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px dashed #c8dfc0;
+  margin-bottom: 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-left i {
+  font-size: 2.5rem;
+  color: #2f7a4c;
+  background: #e1f0db;
+  padding: 0.8rem;
+  border-radius: 20px;
+}
+
+.header-left h1 {
+  font-size: 1.5rem;
+  color: #1c4b2d;
+  font-weight: 600;
+}
+
+.header-left p {
+  font-size: 0.9rem;
+  color: #4a6b52;
+}
+
+.header-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.class-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.class-info label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2f7a4c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.class-info input {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #b9d8ae;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  background: #f7fcf5;
+  color: #1e3a28;
+  width: 180px;
+}
+
+.class-info input:focus {
+  outline: none;
+  border-color: #2f7a4c;
+  background: #ffffff;
+}
+
+/* ---------- Controls ---------- */
+.tracker-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+  padding: 1rem 1.2rem;
+  background: #f7fcf5;
+  border-radius: 18px;
+  border: 1px solid #d5e8cd;
+  margin-bottom: 1.5rem;
+}
+
+.control-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.control-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2f7a4c;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.group-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.group-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #e3f0dc;
+  border: 1px solid #b9d8ae;
+  border-radius: 30px;
+  padding: 0.3rem 0.5rem 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1d4b2b;
+}
+
+.group-chip .remove-group {
+  background: #c9d8c2;
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #1d4b2b;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.group-chip .remove-group:hover {
+  background: #e8a0a0;
+  color: #7a1e1e;
+}
+
+#semesterFilter {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #b9d8ae;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  background: #ffffff;
+  color: #1e3a28;
+  cursor: pointer;
+}
+
+#semesterFilter:focus {
+  outline: none;
+  border-color: #2f7a4c;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary,
+.btn-secondary,
+.btn-danger,
+.btn-small {
+  padding: 0.55rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: #2f7a4c;
+  color: #ffffff;
+  box-shadow: 0 4px 0 #1e5533;
+}
+
+.btn-primary:hover {
+  background: #256640;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #e3f0dc;
+  color: #1d4b2b;
+  border: 1px solid #b9d8ae;
+  box-shadow: 0 4px 0 #c4d8bc;
+}
+
+.btn-secondary:hover {
+  background: #d3e8cb;
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background: #f5e0e0;
+  color: #8a2e2e;
+  border: 1px solid #e8b8b8;
+  box-shadow: 0 4px 0 #e0c0c0;
+}
+
+.btn-danger:hover {
+  background: #eccccc;
+  transform: translateY(-2px);
+}
+
+.btn-small {
+  background: #d9ead3;
+  color: #1d4b2b;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  border: 1px dashed #8fb585;
+}
+
+.btn-small:hover {
+  background: #c8e0c0;
+}
+
+/* ---------- Stats Bar ---------- */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: #f7fcf5;
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+  border: 1px solid #d5e8cd;
+}
+
+.stat-card i {
+  font-size: 1.8rem;
+  color: #4c8b5c;
+}
+
+.stat-card.highlight {
+  background: #e3f0dc;
+  border-color: #b9d8ae;
+}
+
+.stat-card.highlight i {
+  color: #2f7a4c;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1c4b2d;
+  line-height: 1.1;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #4a6b52;
+  font-weight: 500;
+}
+
+/* ---------- Table ---------- */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid #d5e8cd;
+  margin-bottom: 1.5rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+#trackerTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  background: #ffffff;
+}
+
+#trackerTable thead th {
+  position: sticky;
+  top: 0;
+  background: #2f7a4c;
+  color: #ffffff;
+  padding: 0.8rem 0.6rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  z-index: 2;
+  border-right: 1px solid #3d8b57;
+}
+
+#trackerTable thead th:first-child {
+  border-radius: 17px 0 0 0;
+}
+
+#trackerTable thead th:last-child {
+  border-radius: 0 17px 0 0;
+}
+
+#trackerTable thead th.lesson-col {
+  text-align: center;
+  min-width: 100px;
+}
+
+#trackerTable tbody td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #e8f2e3;
+  border-right: 1px solid #e8f2e3;
+  vertical-align: middle;
+}
+
+#trackerTable tbody tr:hover {
+  background: #f7fcf5;
+}
+
+#trackerTable tbody tr.semester-divider td {
+  background: #d9ead3;
+  font-weight: 700;
+  color: #1c4b2d;
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 0.7rem;
+}
+
+.objective-cell {
+  font-size: 0.8rem;
+  color: #2a4534;
+  max-width: 260px;
+  line-height: 1.35;
+}
+
+.objective-cell strong {
+  display: block;
+  color: #1c4b2d;
+  font-size: 0.82rem;
+  margin-bottom: 0.15rem;
+}
+
+.status-cell {
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease;
+}
+
+.status-cell:hover {
+  background: #e3f0dc;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1rem;
+  transition: transform 0.15s ease;
+}
+
+.status-badge:hover {
+  transform: scale(1.15);
+}
+
+.status-met {
+  background: #d3f0c9;
+  color: #1c7a3a;
+}
+
+.status-progress {
+  background: #fef3c7;
+  color: #a16207;
+}
+
+.status-notstarted {
+  background: #ececec;
+  color: #8a8a8a;
+}
+
+.status-support {
+  background: #fad4d4;
+  color: #b91c1c;
+}
+
+.group-name-cell {
+  font-weight: 600;
+  color: #1c4b2d;
+  background: #f2f9ee;
+  white-space: nowrap;
+  padding-left: 1rem;
+}
+
+/* ---------- Notes Panel ---------- */
+.notes-panel {
+  background: #f7fcf5;
+  border: 1px solid #d5e8cd;
+  border-radius: 18px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.notes-panel h3 {
+  font-size: 1rem;
+  color: #1c4b2d;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.notes-panel textarea {
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid #b9d8ae;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #1e3a28;
+  background: #ffffff;
+  resize: vertical;
+}
+
+.notes-panel textarea:focus {
+  outline: none;
+  border-color: #2f7a4c;
+}
+
+/* ---------- Legend ---------- */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 0.9rem 1.2rem;
+  background: #eef7ea;
+  border-radius: 30px;
+  font-size: 0.83rem;
+  color: #2a4534;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.green { background: #d3f0c9; border: 1px solid #1c7a3a; }
+.dot.yellow { background: #fef3c7; border: 1px solid #a16207; }
+.dot.grey { background: #ececec; border: 1px solid #8a8a8a; }
+.dot.red { background: #fad4d4; border: 1px solid #b91c1c; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .tracker-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-right {
+    width: 100%;
+  }
+  .class-info input {
+    width: 100%;
+  }
+  .tracker-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .control-group {
+    flex-wrap: wrap;
+  }
+}
+
+@media print {
+  body { background: #ffffff; padding: 0; }
+  .tracker-page { box-shadow: none; border: none; padding: 0.5rem; }
+  .tracker-controls, .btn-primary, .btn-secondary, .btn-danger, .btn-small,
+  .remove-group { display: none !important; }
+  .table-wrapper { max-height: none; overflow: visible; border: 1px solid #999; }
+  #trackerTable thead th { background: #2f7a4c !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .status-met, .status-progress, .status-notstarted, .status-support {
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .notes-panel textarea { border: 1px solid #999; min-height: 80px; }
+}

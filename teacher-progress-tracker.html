@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Progress Tracker · Grade 10 Computer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/tracker-style.css">
+</head>
+<body>
+
+<div class="tracker-page">
+
+  <!-- ===== HEADER ===== -->
+  <header class="tracker-header">
+    <div class="header-left">
+      <i class="fas fa-clipboard-list"></i>
+      <div>
+        <h1>Teacher Progress Tracker</h1>
+        <p>Mathayom 4 (Grade 10) · Computational Thinking & Project Development</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="class-info">
+        <label>Class:</label>
+        <input type="text" id="className" placeholder="e.g. M.4/1" value="M.4/1">
+      </div>
+      <div class="class-info">
+        <label>Teacher:</label>
+        <input type="text" id="teacherName" placeholder="Your name">
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== CONTROLS ===== -->
+  <div class="tracker-controls">
+    <div class="control-group">
+      <label><i class="fas fa-users"></i> Groups:</label>
+      <div id="groupChips" class="group-chips"></div>
+      <button id="addGroupBtn" class="btn-small"><i class="fas fa-plus"></i> Add Group</button>
+    </div>
+
+    <div class="control-group">
+      <label><i class="fas fa-filter"></i> Semester:</label>
+      <select id="semesterFilter">
+        <option value="all">All Semesters</option>
+        <option value="1">Semester 1</option>
+        <option value="2">Semester 2</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <button id="saveBtn" class="btn-primary"><i class="fas fa-save"></i> Save Progress</button>
+      <button id="printBtn" class="btn-secondary"><i class="fas fa-print"></i> Print / PDF</button>
+      <button id="resetBtn" class="btn-danger"><i class="fas fa-trash"></i> Reset</button>
+    </div>
+  </div>
+
+  <!-- ===== STATS ===== -->
+  <div class="stats-bar" id="statsBar">
+    <div class="stat-card">
+      <i class="fas fa-check-circle"></i>
+      <div>
+        <span class="stat-value" id="totalCompleted">0</span>
+        <span class="stat-label">Objectives Met</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <i class="fas fa-spinner"></i>
+      <div>
+        <span class="stat-value" id="totalInProgress">0</span>
+        <span class="stat-label">In Progress</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <i class="fas fa-times-circle"></i>
+      <div>
+        <span class="stat-value" id="totalNotStarted">0</span>
+        <span class="stat-label">Not Started</span>
+      </div>
+    </div>
+    <div class="stat-card highlight">
+      <i class="fas fa-percentage"></i>
+      <div>
+        <span class="stat-value" id="overallProgress">0%</span>
+        <span class="stat-label">Overall Progress</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TABLE ===== -->
+  <div class="table-wrapper">
+    <table id="trackerTable">
+      <thead id="tableHead"></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- ===== NOTES PANEL ===== -->
+  <div class="notes-panel">
+    <h3><i class="fas fa-sticky-note"></i> Teacher Notes</h3>
+    <textarea id="teacherNotes" placeholder="Write general observations, reminders, or notes for your class..."></textarea>
+  </div>
+
+  <!-- ===== LEGEND ===== -->
+  <div class="legend">
+    <span class="legend-item"><span class="dot green"></span> Met (✅)</span>
+    <span class="legend-item"><span class="dot yellow"></span> In Progress (🔄)</span>
+    <span class="legend-item"><span class="dot grey"></span> Not Started (—)</span>
+    <span class="legend-item"><span class="dot red"></span> Needs Support (⚠️)</span>
+  </div>
+
+</div>
+
+<script src="js/tracker-script.js"></script>
+</body>
+</html>

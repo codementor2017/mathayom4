@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 · Writing Basic Queries</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/lesson-style.css">
+</head>
+<body>
+  <div class="lesson-page">
+
+    <!-- ===== PHOTO PLACEHOLDER ===== -->
+    <!-- 
+      IMAGE DESCRIPTION:
+      A person searching through a well-organized library or filing 
+      cabinet, pulling out exactly the right folder. The image 
+      represents writing SQL queries to get exactly the data you need.
+      
+      SUGGESTED SOURCE: Unsplash / Pexels
+      SEARCH: "library filing cabinet search" or "organized files drawer"
+      DIMENSIONS: 1200×400px landscape
+    -->
+    <div class="lesson-hero">
+      <img src="../images/sem2-lesson-03.jpg" alt="Searching files — symbolizing SQL queries" class="lesson-hero-img">
+      <div class="lesson-hero-overlay">
+        <span class="lesson-number">Semester 2 · Lesson 3</span>
+        <h1>Writing Basic Queries</h1>
+      </div>
+    </div>
+
+    <div class="lesson-nav-top">
+      <a href="lesson-02.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-04.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="lesson-meta">
+      <span><i class="fas fa-clock"></i> 100 minutes</span>
+      <span><i class="fas fa-layer-group"></i> Phase 6 · Data Modeling & Database Design</span>
+      <span><i class="fas fa-bullseye"></i> SELECT, INSERT, UPDATE</span>
+    </div>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-seedling"></i> Why This Matters</h2>
+      <p>A database is useless if you cannot ask it questions. <strong>SQL</strong> is the language for talking to databases. In this lesson, you will learn to write queries that find, add, and update data — the same queries real apps use every day.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-leaf"></i> What You Will Learn</h2>
+      <ul class="objectives">
+        <li>Write SELECT queries.</li>
+        <li>Write INSERT and UPDATE queries.</li>
+        <li>Use WHERE clauses to filter data.</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-book-open"></i> Words to Know</h2>
+      <div class="vocab-grid">
+        <span>query</span>
+        <span>SELECT</span>
+        <span>INSERT</span>
+        <span>UPDATE</span>
+        <span>DELETE</span>
+        <span>WHERE</span>
+        <span>FROM</span>
+        <span>ORDER BY</span>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-stream"></i> Lesson Journey (100 minutes)</h2>
+
+      <div class="flow-block">
+        <h3>Part 1 — How Do You Get Data? <span class="time">0–10 min</span></h3>
+        <p>Ask yourself: <em>How do you get data from a database?</em></p>
+        <p>You ask questions using queries.</p>
+        <p>SQL is the language for talking to databases.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 2 — Basic SQL <span class="time">10–30 min</span></h3>
+        <p>Learn these queries:</p>
+        <pre class="code-block">
+SELECT * FROM Books;
+SELECT Title, Author FROM Books;
+SELECT * FROM Books WHERE Genre = 'Fantasy';
+INSERT INTO Books (Title, Author) VALUES ('New Book', 'Author');
+UPDATE Books SET Available = 'No' WHERE BookID = 1;
+DELETE FROM Books WHERE BookID = 2;</pre>
+        <p>See each query with its results.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 3 — Write Queries Together <span class="time">30–55 min</span></h3>
+        <p>Write 8 queries for the library system.</p>
+        <p>Test each query in SQLite.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 4 — Your Turn: Write Your Queries <span class="time">55–85 min</span></h3>
+        <p>Write queries for your project:</p>
+        <ul>
+          <li>At least 3 SELECT queries.</li>
+          <li>1 INSERT.</li>
+          <li>1 UPDATE.</li>
+          <li>1 DELETE.</li>
+          <li>2 queries with WHERE.</li>
+        </ul>
+        <p>Test in SQLite or Google Sheets.</p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 5 — Share and Discuss <span class="time">85–95 min</span></h3>
+        <p>Present your queries.</p>
+        <p>Discuss: <em>Which query is most important for your project?</em></p>
+      </div>
+
+      <div class="flow-block">
+        <h3>Part 6 — Exit Ticket <span class="time">95–100 min</span></h3>
+        <p>Write a SELECT query that finds all records where the genre is 'Science'.</p>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-check-circle"></i> Check Your Understanding</h2>
+      <p>You are ready to move on when you can write basic SQL queries.</p>
+      <p><strong>Support:</strong> Use a SQL cheat sheet.</p>
+      <p><strong>Challenge:</strong> Use JOIN and GROUP BY.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2><i class="fas fa-home"></i> Before Next Lesson</h2>
+      <p>Write 5 more queries for your project.</p>
+    </section>
+
+    <section class="teacher-announcement">
+      <h2><i class="fas fa-bullhorn"></i> Teacher Announcement</h2>
+      <div class="announcement-placeholder">
+        <p><em>[Write your announcement here]</em></p>
+      </div>
+    </section>
+
+    <div class="lesson-nav-bottom">
+      <a href="lesson-02.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Previous</a>
+      <a href="../index.html" class="nav-btn home"><i class="fas fa-home"></i> Course Home</a>
+      <a href="lesson-04.html" class="nav-btn next">Next Lesson <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+/* ============================================
+   LESSON STYLES — NATURE THEME (Student Textbook)
+   Shared by all Semester 1 & 2 lesson pages
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Georgia', Roboto, system-ui, sans-serif;
+}
+
+body {
+  background: #eef5ea;
+  color: #1e3a28;
+  line-height: 1.75;
+  padding: 1.5rem;
+  font-size: 17px;
+}
+
+/* ---------- Lesson Page Container ---------- */
+.lesson-page {
+  max-width: 950px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 20px 45px -18px rgba(40, 70, 45, 0.35);
+  overflow: hidden;
+  border: 1px solid #c8dfc0;
+}
+
+/* ---------- Hero Image ---------- */
+.lesson-hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #cfe3c8;
+}
+
+.lesson-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.lesson-hero:hover .lesson-hero-img {
+  transform: scale(1.04);
+}
+
+.lesson-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.8rem 2rem 1.4rem;
+  background: linear-gradient(to top, rgba(18, 48, 26, 0.88), transparent);
+  color: #f0faec;
+}
+
+.lesson-number {
+  display: inline-block;
+  background: #2f7a4c;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-hero-overlay h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- TOP Navigation Bar ---------- */
+.lesson-nav-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background: #e3f0dc;
+  border-bottom: 1px solid #c8dfc0;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2f7a4c;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 40px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 3px 0 #1e5533;
+}
+
+.nav-btn:hover {
+  background: #256640;
+  transform: translateY(-2px);
+}
+
+.nav-btn.next {
+  background: #3d8b57;
+}
+
+.nav-btn.next:hover {
+  background: #2f7a4c;
+}
+
+.nav-btn.home {
+  background: #6a9f78;
+}
+
+.nav-btn.home:hover {
+  background: #558a63;
+}
+
+/* ---------- Lesson Meta Bar ---------- */
+.lesson-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.5rem;
+  background: #f0f7ec;
+  padding: 0.9rem 2rem;
+  font-size: 0.9rem;
+  color: #1f4a2b;
+  border-bottom: 1px solid #d5e8cd;
+}
+
+.lesson-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.lesson-meta i {
+  color: #2f7a4c;
+}
+
+/* ---------- Sections ---------- */
+.lesson-section {
+  padding: 1.8rem 2.2rem;
+  border-bottom: 1px dashed #d5e8cd;
+}
+
+.lesson-section:last-of-type {
+  border-bottom: none;
+}
+
+.lesson-section h2 {
+  font-size: 1.35rem;
+  color: #1c4b2d;
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lesson-section h2 i {
+  color: #2f7a4c;
+  font-size: 1.2rem;
+}
+
+.lesson-section p {
+  margin-bottom: 0.8rem;
+  color: #2a4534;
+}
+
+/* ---------- Objectives ---------- */
+.objectives {
+  list-style: none;
+  padding-left: 0;
+}
+
+.objectives li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.6rem;
+  color: #1f3b2c;
+}
+
+.objectives li::before {
+  content: "🌱";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+}
+
+/* ---------- Vocabulary ---------- */
+.vocab-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.vocab-grid span {
+  background: #e8f5e2;
+  border: 1px solid #b9d8ae;
+  color: #1d4b2b;
+  padding: 0.35rem 0.9rem;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.vocab-grid span:hover {
+  background: #d3ecc8;
+}
+
+/* ---------- Lesson Flow / Textbook Reading ---------- */
+.flow-block {
+  background: #f7fcf5;
+  border-left: 5px solid #4c8b5c;
+  border-radius: 0 18px 18px 0;
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 1.3rem;
+}
+
+.flow-block h3 {
+  font-size: 1.08rem;
+  color: #1c4b2d;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.flow-block .time {
+  display: inline-block;
+  background: #d9ead3;
+  color: #1d4b2b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.7rem;
+  border-radius: 20px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.flow-block p {
+  margin-bottom: 0.6rem;
+  font-size: 0.98rem;
+}
+
+.flow-block ul,
+.flow-block ol {
+  margin-left: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.flow-block li {
+  margin-bottom: 0.35rem;
+  font-size: 0.97rem;
+}
+
+.flow-block em {
+  color: #2f6e45;
+}
+
+.flow-block strong {
+  color: #1a4a2a;
+}
+
+/* ---------- Code Blocks ---------- */
+.code-block {
+  background: #1f3b2c;
+  color: #e4f5dc;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.88rem;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  overflow-x: auto;
+  margin: 0.8rem 0;
+  line-height: 1.5;
+  border-left: 5px solid #6cbf7a;
+}
+
+/* ---------- Teacher Announcement ---------- */
+.teacher-announcement {
+  background: #fff8e7;
+  border-top: 3px solid #e0b84c;
+  padding: 1.6rem 2.2rem;
+}
+
+.teacher-announcement h2 {
+  font-size: 1.25rem;
+  color: #8a6516;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.teacher-announcement h2 i {
+  color: #d9a520;
+}
+
+.announcement-placeholder {
+  background: #fffdf6;
+  border: 2px dashed #e6c975;
+  border-radius: 16px;
+  padding: 1.3rem 1.5rem;
+  color: #9c7b28;
+  font-style: italic;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- Bottom Navigation (kept for convenience) ---------- */
+.lesson-nav-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.5rem 2.2rem;
+  background: #e3f0dc;
+  border-top: 1px solid #c8dfc0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  body {
+    padding: 0.8rem;
+    font-size: 16px;
+  }
+  .lesson-hero {
+    height: 200px;
+  }
+  .lesson-hero-overlay h1 {
+    font-size: 1.3rem;
+  }
+  .lesson-section {
+    padding: 1.3rem 1.2rem;
+  }
+  .lesson-meta {
+    padding: 0.7rem 1.2rem;
+  }
+  .flow-block {
+    padding: 1rem 1rem;
+  }
+  .lesson-nav-top,
+  .lesson-nav-bottom {
+    justify-content: center;
+    padding: 1rem;
+  }
+  .nav-btn {
+    font-size: 0.8rem;
+    padding: 0.45rem 1rem;
+  }
+}
